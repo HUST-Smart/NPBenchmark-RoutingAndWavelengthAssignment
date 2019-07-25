@@ -1,0 +1,2 @@
+{"author":"fy","algorithm":"rand","thread":"1","cpu":"Intel Core i5-7400 3.00GHz","ram":"16G 2400MHz","language":"C++","compiler":"VS2017","os":"Windows 10","problem":"RWA","instance":"Y.0.0_seed=0.json","duration":"0.002000s","obj":0,"email":"","date":""}
+{"traOut":[{"path":[0,4],"wave":1,"ID":0},{"path":[0,4],"wave":1,"ID":1},{"path":[1,2],"wave":1,"ID":2}]}
