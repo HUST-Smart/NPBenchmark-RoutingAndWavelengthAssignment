@@ -196,10 +196,10 @@ namespace szx {
 		Length bestValue = Problem::MaxDistance;
 		for (int i = 0; i < workerNum; ++i) {
 			if (!success[i]) { continue; }
-			Log(LogSwitch::Szx::Framework) << "worker " << i << " got " << solutions[i].waveNum << endl;
-			if (solutions[i].waveNum >= bestValue) { continue; }
+			Log(LogSwitch::Szx::Framework) << "worker " << i << " got " << solutions[i].waveLengthNum << endl;
+			if (solutions[i].waveLengthNum >= bestValue) { continue; }
 			bestIndex = i;
-			bestValue = solutions[i].waveNum;
+			bestValue = solutions[i].waveLengthNum;
 		}
 
 		env.rid = to_string(bestIndex);
@@ -239,7 +239,7 @@ namespace szx {
 
 		System::MemoryUsage mu = System::peakMemoryUsage();
 
-		Length obj = output.waveNum;
+		Length obj = output.waveLengthNum;
 		Length checkerObj = -1;
 		bool feasible = 1;
 		//feasible = check(checkerObj);
@@ -273,7 +273,7 @@ namespace szx {
 		ofstream logFile(env.logPath, ios::app);
 		logFile.seekp(0, ios::end);
 		if (logFile.tellp() <= 0) {
-			logFile << "Time,ID,Instance,Feasible,ObjMatch,WaveNum,Duration,PhysMem,VirtMem,RandSeed,Config,Generation,Iteration,Solution" << endl;
+			logFile << "Time,ID,Instance,Feasible,ObjMatch,waveLengthNum,Duration,PhysMem,VirtMem,RandSeed,Config,Generation,Iteration,Solution" << endl;
 		}
 		logFile << log.str();
 		logFile.close();
@@ -290,7 +290,7 @@ namespace szx {
 			ID src = (*i).src();
 			ID dst = (*i).dst();
 		}
-		sln.waveNum = 1; // 保存结果，总使用波长数
+		sln.waveLengthNum = 1; // 保存结果，总使用波长数
 		for (auto i = input.traffics().begin(); i != input.traffics().end(); ++i) {// 计算所有业务的路径及波长
 			ID src = (*i).src();
 			ID dst = (*i).dst(); 
