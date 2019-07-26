@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Solver", "Solver\Solver.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Simulator", "Simulator\Simulator.vcxproj", "{38CD1DA7-5AB5-44ED-8E60-EF1171D8A48B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Checker", "Checker\Checker.vcxproj", "{C1E187AE-9ABA-4CE4-971D-0FDB19FA9998}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{38CD1DA7-5AB5-44ED-8E60-EF1171D8A48B}.Release|x64.Build.0 = Release|x64
 		{38CD1DA7-5AB5-44ED-8E60-EF1171D8A48B}.Release|x86.ActiveCfg = Release|Win32
 		{38CD1DA7-5AB5-44ED-8E60-EF1171D8A48B}.Release|x86.Build.0 = Release|Win32
+		{C1E187AE-9ABA-4CE4-971D-0FDB19FA9998}.Debug|x64.ActiveCfg = Debug|x64
+		{C1E187AE-9ABA-4CE4-971D-0FDB19FA9998}.Debug|x64.Build.0 = Debug|x64
+		{C1E187AE-9ABA-4CE4-971D-0FDB19FA9998}.Debug|x86.ActiveCfg = Debug|Win32
+		{C1E187AE-9ABA-4CE4-971D-0FDB19FA9998}.Debug|x86.Build.0 = Debug|Win32
+		{C1E187AE-9ABA-4CE4-971D-0FDB19FA9998}.Release|x64.ActiveCfg = Release|x64
+		{C1E187AE-9ABA-4CE4-971D-0FDB19FA9998}.Release|x64.Build.0 = Release|x64
+		{C1E187AE-9ABA-4CE4-971D-0FDB19FA9998}.Release|x86.ActiveCfg = Release|Win32
+		{C1E187AE-9ABA-4CE4-971D-0FDB19FA9998}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
