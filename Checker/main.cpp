@@ -69,8 +69,7 @@ int main(int argc, char *argv[]) {
 					int node1 = *p, node2 = *(p + 1);
 					for (auto p2 = (*o2).path().begin(); p2 != (*o2).path().end()-1; ++p2) {
 						int node3 = *p2, node4 = *(p2 + 1);
-						if (node1 == node3 && node2 == node4 ||
-							node1 == node4 && node2 == node3) {
+						if (node1 == node3 && node2 == node4) {
 							error |= CheckerFlag::WaveLenConflictError;
 						}
 					}
