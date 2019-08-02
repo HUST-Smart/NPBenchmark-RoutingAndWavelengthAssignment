@@ -30,6 +30,7 @@ namespace szx {
 			String instSet;
 			String instId;
 			String randSeed;
+			String currentBest;
 			String timeout;
 			String maxIter;
 			String jobNum;

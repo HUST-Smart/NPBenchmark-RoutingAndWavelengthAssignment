@@ -78,6 +78,9 @@ namespace szx {
 		str = optionMap.at(Cli::InstancePathOption());
 		if (str != nullptr) { instPath = str; }
 
+		str = optionMap.at(Cli::CurrentBestOption());
+		if (str != nullptr) { currentBestValue = atoi(str); }
+
 		str = optionMap.at(Cli::SolutionPathOption());
 		if (str != nullptr) { slnPath = str; }
 

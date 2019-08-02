@@ -20,6 +20,7 @@ namespace szx {
 
 			static String InstancePathOption() { return "-p"; }
 			static String SolutionPathOption() { return "-o"; }
+			static String CurrentBestOption() { return "-cb"; }
 			static String RandSeedOption() { return "-s"; }
 			static String TimeoutOption() { return "-t"; }
 			static String MaxIterOption() { return "-i"; }
@@ -83,7 +84,7 @@ namespace szx {
 				return oss.str();
 			}
 
-			
+
 			Algorithm alg = Configuration::Algorithm::Greedy; // OPTIMIZE[szx][3]: make it a list to specify a series of algorithms to be used by each threads in sequence.
 			int threadNumPerWorker = (std::min)(1, static_cast<int>(std::thread::hardware_concurrency()));
 		};
@@ -138,6 +139,7 @@ namespace szx {
 			// essential information.
 			String instPath;
 			String slnPath;
+			int currentBestValue;
 			int randSeed;
 			Duration msTimeout;
 
