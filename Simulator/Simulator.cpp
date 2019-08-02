@@ -33,7 +33,7 @@ namespace szx {
 		{"NSF2.3",21},
 		{"NSF2.12",35},
 		{"NSF2.48",39},
-		{"Y.0.0_seed=0",1},
+		/*{"Y.0.0_seed=0",1},
 		{"Y.3.20_seed=1",29},
 		{"Y.3.20_seed=2",33},
 		{"Y.3.20_seed=3",29},
@@ -108,7 +108,7 @@ namespace szx {
 		{"Y.5.100_seed=2",73},
 		{"Y.5.100_seed=3",54},
 		{"Y.5.100_seed=4",77},
-		{"Y.5.100_seed=5",66},
+		{"Y.5.100_seed=5",66},*/
 		/*{"Z.4x25.20"},
 		{"Z.4x25.40"},
 		{"Z.4x25.60"},
@@ -252,7 +252,7 @@ namespace szx {
 			//shuffle(instList.begin(), instList.end(), rgen);
 			for (auto inst = instList.begin(); inst != instList.end(); ++inst) {
 				task.instId = (*inst).first;
-				task.currentBest = (*inst).second;
+				task.currentBest =to_string( (*inst).second);
 				task.randSeed = to_string(Random::generateSeed());
 				task.runId = to_string(i);
 				run(task);
@@ -279,7 +279,7 @@ namespace szx {
 			//shuffle(instList.begin(), instList.end(), rgen);
 			for (auto inst = instList.begin(); inst != instList.end(); ++inst) {
 				task.instId = (*inst).first;
-				task.currentBest = (*inst).second;
+				task.currentBest = to_string((*inst).second);
 				task.randSeed = to_string(Random::generateSeed());
 				task.runId = to_string(i);
 				tp.push([=]() { run(task); });
